@@ -1,13 +1,6 @@
 import "./App.css";
 import logo from "./assets/learn.svg";
 
-function Cabecalho() {
-  return (
-    <header>
-      <h1>Titulo</h1>
-    </header>
-  );
-}
 
 function app() {
   return (
