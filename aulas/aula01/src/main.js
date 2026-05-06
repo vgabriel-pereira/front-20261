@@ -1,39 +1,37 @@
 import "./style.css";
 
-/*
-  validar o formulario com as regras:
-  - matricula > 0 e obrigatoria
-  - senha tamanho > 6 caracteres e obrigatoria
-*/
-
-const matricula = document.querySelector("#matricula");
-const senha = document.querySelector("#senha");
 const botao = document.querySelector("button");
 
-botao.addEventListener("click", function (e) {
+botao.addEventListener("click", (e) => {
+  const matriculaInput = document.querySelector("#matricula");
   const matriculaErro = document.querySelector("#matriculaErro");
+  const senhaInput = document.querySelector("#senha");
   const senhaErro = document.querySelector("#senhaErro");
-
+ 
   matriculaErro.textContent = '';
   senhaErro.textContent = '';
 
-  if (matricula.value == "") {
-    matriculaErro.textContent = "Matrícula é obrigatória";
+  if (matriculaInput.value == '') {
+    matriculaErro.textContent = 
+        "Matrícula é obrigatória";
     return;
   }
 
-  if (parseInt(matricula.value) <= 0) {
-    matriculaErro.textContent = "Matrícula deve ser um numero positivo";
+  if (parseInt(matriculaInput.value) <= 0) {
+    matriculaErro.textContent = 
+        "Matricula deve ser um numero positivo";
     return;
   }
 
-  if (senha.value == "") {
-    senhaErro.textContent = "Senha é obrigatória";
+  if (senhaInput.value == '') {
+    senhaErro.textContent = "Senha é obrigatoria";
     return;
   }
 
-  if (senha.value.length < 8) {
-    senhaErro.textContent = "Senha deve ter no mínimo 8 caracteres";
+  if (senhaInput.value.length < 8) {
+    senhaErro.textContent = 
+        "A Senha deve conter pelo menos 8 caracters";
     return;
   }
+
 });

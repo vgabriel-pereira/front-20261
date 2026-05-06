@@ -1,16 +1,15 @@
+import Tabela from "../components/Tabela";
 import Layout from "./Layout";
 
 function Requerimentos() {
-    return <>
-        <Sidebar />
-        <main>
-            <Topbar titulo="Meus requerimentos"/>
-            <h2>Faça solicitações online para a secretaria</h2>
-            <section>
-            </section>
-        </main>
-    </>
+  return (
+    <Layout 
+      titulo="Meus Requerimentos"
+      subtitulo="Faça solicitações online para a secretaria"
+    >
+        <Tabela />
+    </Layout>
+  );
 }
 
 export default Requerimentos;
-
