@@ -1,25 +1,21 @@
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
+import PageTitle from "../components/PageTitle";
+import Tabela from "../components/Tabela";
 
-function Boletos() {
+export default function Boletos() {
   return (
-    <div className="flex flex-col md:flex-row">
-      <Header />
-      <div className="flex">
-        <Sidebar />
-        <main className="flex-1 p-4">
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Boletos</h2>
-            <p className="mb-4">Lista de boletos pendentes.</p>
-            <ol className="list-decimal list-inside">
-              <li className="mb-2">Boleto 1: R$ 150,00 - Vencimento: 15/11/2023</li>
-              <li className="mb-2">Boleto 2: R$ 200,00 - Vencimento: 20/11/2023</li>
-            </ol>
-          </section>
-        </main>
-      </div>
-    </div>
+    <>
+      <PageTitle title="Histórico de pagamentos" />
+      <Tabela
+        table={{
+          header: ["Vencimento", "Valor $", "Situação"],
+          rows: [
+            ["07/01/2025", "500,00", "Pago"],
+            ["07/02/2025", "500,00", "Pendente"],
+            ["07/03/2025", "500,00", "Pendente"],
+            ["07/04/2025", "500,00", "Pago"],
+          ],
+        }}
+      />
+    </>
   );
 }
-
-export default Boletos;

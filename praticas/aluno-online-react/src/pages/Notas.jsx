@@ -1,26 +1,32 @@
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
+import PageTitle from "../components/PageTitle";
+import Tabela from "../components/Tabela";
 
-function Notas() {
+export default function Notas() {
   return (
-    <div className="flex flex-col md:flex-row">
-      <Header />
-      <div className="flex">
-        <Sidebar />
-        <main className="flex-1 p-4">
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Notas</h2>
-            <p className="mb-4">Lista de notas por disciplina.</p>
-            <ul className="list-none p-0">
-              <li className="p-2 border-b border-gray-300">Matemática: 8.5</li>
-              <li className="p-2 border-b border-gray-300">Português: 9.0</li>
-              <li className="p-2 border-b border-gray-300">História: 7.5</li>
-            </ul>
-          </section>
-        </main>
-      </div>
-    </div>
+    <>
+      <PageTitle title="Histórico de notas por semestre" />
+      <Tabela
+        title="2025.01"
+        table={{
+          header: ["Disciplina", "A1", "A2", "A3", "Menção"],
+          rows: [
+            ["Matemática", "8.5", "7.0", "9.0", "B"],
+            ["Português", "7.5", "8.0", "8.5", "B"],
+            ["Inglês", "8.0", "7.5", "8.0", "B"],
+          ],
+        }}
+      />
+      <Tabela
+        title="2025.02"
+        table={{
+          header: ["Disciplina", "A1", "A2", "A3", "Menção"],
+          rows: [
+            ["Power BI", "8.5", "7.0", "9.0", "B"],
+            ["Contrução Backend", "8.5", "8.0", "6.5", "B"],
+            ["Segurança", "8.0", "7.5", "5.0", "B"],
+          ],
+        }}
+      />
+    </>
   );
 }
-
-export default Notas;
