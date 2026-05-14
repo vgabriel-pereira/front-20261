@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import { Link, NavLink } from "react-router";
 import logo from "../assets/learn.svg";
 import "./Menu.css";
+=======
+import logo from "../assets/learn.svg";
+>>>>>>> origin
 
 export default function Menu() {
   return (
@@ -11,12 +15,21 @@ export default function Menu() {
       </header>
       <nav className="mt-12">
         <ul className="font-semibold">
+<<<<<<< HEAD
           <li><NavLink to="/">Dashboard</NavLink></li>
           <li><NavLink to="/notas">Notas</NavLink></li>
           <li><NavLink to="/faltas">Faltas</NavLink></li>
           <li><NavLink to="/boletos">Boletos</NavLink></li>
           <li><NavLink to="/requerimentos">Requerimentos</NavLink></li>
           <li><Link to="/login">Sair</Link></li>
+=======
+          <li>Dashboard</li>
+          <li>Notas</li>
+          <li>Faltas</li>
+          <li>Boletos</li>
+          <li>Requerimentos</li>
+          <li>Sair</li>
+>>>>>>> origin
         </ul>
       </nav>
     </aside>
