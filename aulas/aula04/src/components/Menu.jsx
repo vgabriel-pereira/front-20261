@@ -1,7 +1,15 @@
 import { Link, NavLink } from "react-router";
 import "./Menu.css";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 function Menu() {
-    const usuarioId=  0
+  const usuarioId = 0;
+
+  const { setLogado } = useContext(AuthContext);
+
+  const handleSair = () => {
+    setLogado(false);
+  };
   return (
     <nav>
       <ul>
@@ -18,7 +26,9 @@ function Menu() {
           <NavLink to="/settings">Configurações</NavLink>
         </li>
         <li>
-          <Link to="/login">Sair</Link>
+          <Link to="/" onClick={handleSair}>
+            Sair
+          </Link>
         </li>
       </ul>
     </nav>
